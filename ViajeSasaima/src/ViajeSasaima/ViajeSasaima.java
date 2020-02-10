@@ -27,9 +27,9 @@ public class ViajeSasaima {
         System.out.println("Ingrese galones por KM");
         galon_x_km = reader.nextInt();
 
-        int viajes_necesarios = kg_maximo_soportado / kg_carga;
+        int viajes_necesarios = kg_carga / kg_maximo_soportado;
 
-        System.out.println("Viajes necesarios: " + viajes_necesarios);
+        System.out.println("Viajes necesarios: " + Math.ceil(viajes_necesarios));
 
         int galones_x_viajes =  (galon_x_km * km_bg_sasaima) * viajes_necesarios;
 
