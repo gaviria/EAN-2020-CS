@@ -10,11 +10,11 @@ public class Restaurante {
         int total = 0;
         int cantidad = 0;
 
-        int[][] vegetariana = {{1,2,3},{10000,25000,5000}};
+        int[] vegetariana = {10000,25000,5000};
         String[] vegetariana_platos = {"Sopa", "Ensalada", "Jugo"};
-        int[][] no_vegetariana = {{1,2},{30000,28000}};
+        int[] no_vegetariana = {30000,28000};
         String[] no_vegetariana_platos = {"Carne", "Pollo"};
-        int[][] rapidas = {{1,2},{5000,7000}};
+        int[]rapidas = {5000,7000};
         String[] rapidas_platos = {"Perros", "Hamburguesas"};
 
         System.out.println("Software de Restaurante");
@@ -60,19 +60,19 @@ public class Restaurante {
         }while(plato <= 0 || plato > 3);
 
         if (tipo_de_comida == 1){
-            System.out.println("su plato de comida fue: " + vegetariana_platos[plato]);
+            System.out.println("su plato de comida fue: " + vegetariana_platos[plato-1]);
 
-            total = vegetariana[plato][plato] * cantidad;
+            total = vegetariana[plato-1] * cantidad;
             System.out.println("Total de la cuenta: " + total);
         }else if (tipo_de_comida == 2){
-            System.out.println("su plato de comida fue: " + no_vegetariana_platos[plato]);
+            System.out.println("su plato de comida fue: " + no_vegetariana_platos[plato-1]);
 
-            total = no_vegetariana[plato][plato] * cantidad;
+            total = no_vegetariana[plato-1] * cantidad;
             System.out.println("Total de la cuenta: " + total);
         }else{
-            System.out.println("su plato de comida fue: " + rapidas_platos[plato]);
+            System.out.println("su plato de comida fue: " + rapidas_platos[plato-1]);
 
-            total = rapidas[plato][plato] * cantidad;
+            total = rapidas[plato-1] * cantidad;
             System.out.println("Total de la cuenta: " + total);
         }
 
